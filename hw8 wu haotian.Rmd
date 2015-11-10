@@ -1,0 +1,24 @@
+---
+title: "Homework 8"
+author: "HW"
+date: "November 10, 2015"
+output: html_document
+---
+
+
+Question 1
+```{r}
+library(tidyr)
+data(movies)
+step1 <- gather(movies, percentile, percent, r1:r10)
+step2 <- gather(step1, genre, yes, Action:Short)
+```
+
+Question 2
+
+I guess the easy answer here is to say day of the week (either the numerical or text variable). However, the reality is that you can probably tidy the data depending on what you need.It's entirely possible you wouldn't even want to tidy the data.
+
+
+##"cafedata" already imported into environment
+```{r}
+untidy <- spread(cafedata, Day.Code, Day.of.Week)
